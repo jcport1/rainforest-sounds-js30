@@ -10,6 +10,16 @@ function playSound(e){
     //add class of playing to the key div
     key.classList.add('playing'); 
   }
+
+function playClick(e){
+
+    const audio = document.querySelector(`audio[data-key="${e.target.parentElement.dataset.key}"]`)
+    const key = document.querySelector(`div[data-key="${e.target.parentElement.dataset.key}"]`)
+    if (!audio) return; 
+    audio.currentTime = 0;
+    audio.play();
+    key.classList.add('playing'); 
+}
   
     function removeTransition(e){
   
@@ -21,5 +31,7 @@ function playSound(e){
     //in JS you can't add event listeners to an array of keys, you must loop through each individual
     //element in the array and explicity add an event listener
     keys.forEach(key => key.addEventListener('transitionend', removeTransition
-    )); 
+    ));
+
+    window.addEventListener('click', playClick) 
     window.addEventListener('keydown', playSound)
