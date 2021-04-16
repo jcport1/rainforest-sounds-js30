@@ -36,6 +36,10 @@ body,html {
   cursor: pointer; 
 }
 
+.clickable {
+  cursor: pointer;
+}
+
 .playing {
   transform: scale(1.1);
   border-color: #ffc600;
