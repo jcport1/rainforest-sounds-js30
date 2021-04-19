@@ -2,6 +2,7 @@ html {
   font-size: 10px;
   background: url('./new-background.jpg') bottom center;
   background-size: cover;
+  cursor: pointer; 
 }
 
 body,html {
@@ -41,7 +42,6 @@ body,html {
 kbd {
   display: block;
   font-size: 4rem;
-  cursor: pointer; 
 }
 
 .sound {
