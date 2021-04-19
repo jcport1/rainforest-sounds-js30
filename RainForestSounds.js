@@ -33,5 +33,6 @@ function playClick(e){
     keys.forEach(key => key.addEventListener('transitionend', removeTransition
     ));
 
-    window.addEventListener('click', playClick) 
+    window.addEventListener('click', playClick)
+    window.addEventListener('touchstart', playClick)  
     window.addEventListener('keydown', playSound)
